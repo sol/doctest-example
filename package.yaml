@@ -1,0 +1,23 @@
+name: doctest-example
+
+copyright: (c) 2021 Simon Hengel
+author: Simon Hengel <sol@typeful.net>
+
+ghc-options: -Wall
+
+dependencies:
+  - base == 4.*
+
+flags:
+  doctest:
+    manual: True
+    default: False
+
+library:
+  source-dirs: src
+  when:
+    condition: flag(doctest)
+    build-tools: doctest
+    dependencies:
+      - QuickCheck
+      - template-haskell
