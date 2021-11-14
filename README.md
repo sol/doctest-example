@@ -1,3 +1,3 @@
 ```
-cabal build -fdoctest && cabal exec -- cabal repl -fdoctest --with-ghc=doctest
+cabal build -fdoctest && cabal exec -fdoctest -- cabal repl -fdoctest --with-ghc=doctest
 ```
