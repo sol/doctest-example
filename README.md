@@ -1,3 +1,3 @@
 ```
-cabal build -fdoctest && cabal exec -fdoctest -- cabal repl -fdoctest --with-ghc=doctest
+cabal install doctest --overwrite-policy=always && cabal build && cabal repl --build-depends=QuickCheck --build-depends=template-haskell --with-ghc=doctest
 ```
